@@ -2,7 +2,7 @@ FROM python:3.12.3-alpine3.19
 
 
 LABEL org.opencontainers.image.title="Python, Django, DRF" \
-      org.opencontainers.image.version="5.0.4-3.12.3-alpine3.19" \
+      org.opencontainers.image.version="5.0.4-3.12.3-alpine3.19-wagtail" \
       org.opencontainers.image.description="This image includes Python 3.12.3, Django 5.0.4, djangorestframework 3.15.1, psycopg2-binary 2.9.9, and other modules based on Alpine Linux 3.19. It is suitable for running Django applications that interact with PostgreSQL databases." \
       org.opencontainers.image.url="https://hub.docker.com/r/simpledocker/django" \
       org.opencontainers.image.source="https://github.com/simpledocker/dockerfiles" \
@@ -19,4 +19,6 @@ RUN apk add --no-cache postgresql-dev gcc python3-dev musl-dev \
     dj-database-url==2.1.0 \
     gunicorn==21.2.0 \
     redis==5.0.3 \
-    psycopg2-binary==2.9.9
+    psycopg2-binary==2.9.9 \
+    wagtail==6.0.2 \
+    pandas==2.2.2
